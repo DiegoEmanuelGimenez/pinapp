@@ -4,12 +4,11 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.pinapp.exercice.constants.ConstantConfig;
-import io.swagger.annotations.ApiModel;
 import org.joda.time.DateTime;
 import org.joda.time.Years;
 import java.util.Date;
 
-@ApiModel(description = "DTO de customer para creación y list de clientes")
+//@ApiModel(description = "DTO de customer para creación y list de clientes")
 public class CustomerDto {
 
     private Long id;

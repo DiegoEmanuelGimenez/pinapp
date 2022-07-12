@@ -1,14 +1,11 @@
 package com.pinapp.exercice.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pinapp.exercice.constants.ConstantConfig;
-import io.swagger.annotations.ApiModel;
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@ApiModel(description = "Entidad de persistencia para customer")
 public class Customer {
 
     @Id

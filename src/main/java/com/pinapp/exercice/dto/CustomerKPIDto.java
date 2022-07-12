@@ -1,8 +1,7 @@
 package com.pinapp.exercice.dto;
 
-import io.swagger.annotations.ApiModel;
 
-@ApiModel(description = "DTO de KPIs de customer")
+//@ApiModel(description = "DTO de KPIs de customer")
 public class CustomerKPIDto {
 
     private Double ageAverage;

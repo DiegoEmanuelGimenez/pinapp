@@ -12,11 +12,11 @@ public class CustomerValidator {
 
     public void validateCustomer(CustomerDto customer) throws BadRequestException {
         if(StringUtils.isBlank(customer.getName())) {
-            throw new BadRequestException("name can not be empty");
+            throw new BadRequestException("Name can not be empty");
         }
 
         if(StringUtils.isBlank(customer.getLastname())) {
-            throw new BadRequestException("lastname can not be empty");
+            throw new BadRequestException("Lastname can not be empty");
         }
 
         if(customer.getAge() == null) {
@@ -24,11 +24,11 @@ public class CustomerValidator {
         }
 
         if(Utils.isValidDate(customer.getBirthDate())) {
-            throw new BadRequestException("BirthDate can not be empty");
+            throw new BadRequestException("Birthdate can not be empty");
         }
 
         if (!customer.getAge().equals(customer.getCalculateAge())) {
-            throw new BadRequestException("BirthDate or Age is inconsistent");
+            throw new BadRequestException("Birthdate or Age is inconsistent");
         }
     }
 
