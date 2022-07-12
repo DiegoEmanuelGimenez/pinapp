@@ -80,7 +80,7 @@ public class CustomerDto {
     public Date getDateOfDeath(Double lifeExpentancy) {
         if (this.getBirthDate() == null) return null;
         DateTime dn = new DateTime(this.getBirthDate());
-        dateOfDeath = dn.plusYears(Math.toIntExact(Math.round(lifeExpentancy))).toDate();
+        dateOfDeath = dn.plusDays(Math.toIntExact(Math.round(lifeExpentancy*365))).toDate();
         setDateOfDeath(dateOfDeath);
         return dateOfDeath;
     }

@@ -2,7 +2,6 @@ package com.pinapp.exercice.validator;
 
 import com.pinapp.exercice.dto.CustomerDto;
 import com.pinapp.exercice.exception.BadRequestException;
-import com.pinapp.exercice.util.Utils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +22,7 @@ public class CustomerValidator {
             throw new BadRequestException("Age can not be empty");
         }
 
-        if(Utils.isValidDate(customer.getBirthDate())) {
+        if(customer.getBirthDate() == null) {
             throw new BadRequestException("Birthdate can not be empty");
         }
 
