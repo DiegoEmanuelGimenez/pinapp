@@ -1,13 +1,8 @@
 package com.pinapp.exercice.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 public class Config {
@@ -18,6 +13,13 @@ public class Config {
 
     @Column(name="val", columnDefinition = "varchar(255) not null")
     private String value;
+
+    public Config(){}
+
+    public Config(String code, String value) {
+        this.code = code;
+        this.value = value;
+    }
 
     public String getCode() {
         return code;
@@ -31,6 +33,7 @@ public class Config {
         return value;
     }
 
+    @JsonIgnore
     public Double getDoubleValue() {
         return Double.parseDouble(value);
     }

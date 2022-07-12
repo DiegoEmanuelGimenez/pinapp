@@ -1,4 +1,4 @@
-package com.pinapp.exercice;
+package com.pinapp.exercice.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +22,7 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("com.pinapp.exercice.controller"))
                 .paths(PathSelectors.any())
                 .build()
-                .apiInfo(getApiInfo());
+                .apiInfo(getApiInfo()).useDefaultResponseMessages(false);
     }
 
     private ApiInfo getApiInfo() {

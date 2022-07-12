@@ -3,6 +3,7 @@ package com.pinapp.exercice.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.pinapp.exercice.constants.ConstantConfig;
 import io.swagger.annotations.ApiModel;
 import org.joda.time.DateTime;
 import org.joda.time.Years;
@@ -20,7 +21,7 @@ public class CustomerDto {
     private Integer age;
 
     @JsonProperty("birthdate")
-    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss'Z'")
+    @JsonFormat(pattern= ConstantConfig.FORMAT_DATE_PATTERN)
     private Date birthDate;
 
     @JsonProperty("date_of_death")

@@ -1,9 +1,9 @@
 package com.pinapp.exercice.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.pinapp.exercice.constants.ConstantConfig;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -23,7 +23,7 @@ public class Customer {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="birthdate")
-    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss'Z'")
+    @JsonFormat(pattern= ConstantConfig.FORMAT_DATE_PATTERN)
     private Date birthdate;
 
     public Customer(){}

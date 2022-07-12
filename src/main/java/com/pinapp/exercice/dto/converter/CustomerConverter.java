@@ -23,7 +23,8 @@ public class CustomerConverter extends GenericConverter<CustomerDto, Customer> {
         dto.setBirthDate(entity.getBirthdate());
         dto.setAge(entity.getAge());
         Config config = configService.getConfig(ConstantConfig.CONFIG_LIFE_EXPECTANCY_AVG);
-        dto.getDateOfDeath(config.getDoubleValue());
+        Double lifeExpentancy = (config != null) ? config.getDoubleValue() : ConstantConfig.CONFIG_LIFE_EXPECTANCY_AVG_DEFAULT;
+        dto.getDateOfDeath(lifeExpentancy);
         return dto;
     }
 

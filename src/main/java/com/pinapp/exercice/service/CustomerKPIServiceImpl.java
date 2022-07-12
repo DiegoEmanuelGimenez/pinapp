@@ -14,8 +14,8 @@ public class CustomerKPIServiceImpl implements CustomerKPIService {
     @Override
     public CustomerKPIDto getKPIs() {
         CustomerKPIDto dto = new CustomerKPIDto();
-        dto.setAgeAverage(customerRepository.getAgeAverage());
-        dto.setAgeStandardDeviation(customerRepository.getAgeStandardDeviation());
+        dto.setAgeAverage((customerRepository.getAgeAverage() != null) ? customerRepository.getAgeAverage(): 0);
+        dto.setAgeStandardDeviation((customerRepository.getAgeStandardDeviation() != null) ? customerRepository.getAgeStandardDeviation() : 0);
         return dto;
     }
 }

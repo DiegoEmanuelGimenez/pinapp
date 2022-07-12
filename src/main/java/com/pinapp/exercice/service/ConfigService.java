@@ -4,8 +4,9 @@ import com.pinapp.exercice.entity.Config;
 
 public interface ConfigService {
 
-    Config getConfig(String key);
+    Config getConfig(String code);
+    Config create(String code, String value);
 
-    Config updateConfig(String key, String value);
+    Config update(String code, String value);
 
 }
