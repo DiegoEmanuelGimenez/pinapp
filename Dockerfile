@@ -16,4 +16,4 @@ FROM adoptopenjdk/openjdk8:jdk8u202-b08-alpine-slim
 COPY --from=builder /app/target/exercice-*.jar /exercice.jar
 
 #Run the service
-CMD["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/exercice.jar"]
+CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/exercice.jar"]
